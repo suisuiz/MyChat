@@ -1,0 +1,668 @@
+{
+	"pages": [{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/user/login",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/chat/list",
+			"style": {
+				"navigationBarTitleText": "WuChat",
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300,
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue409",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "24px"
+						}, {
+							"text": "\ue466",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "24px"
+						}]
+					},
+					"pullToRefresh": {
+						"support": true,
+						"color": "#694be1",
+						"style": "circle",
+						"height": "1px",
+						"range": "1px"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/chat/room/chat",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300,
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue537",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "24px"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/chat/room/chat_booth",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/chat/room/service_chat",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300,
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue537",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "24px"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/chat/room/chat_video",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/contacts/contacts",
+			"style": {
+				"navigationBarTitleText": "联系人",
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300,
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue409",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "24px"
+						}, {
+							"text": "\ue466",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "24px"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/index/collect",
+			"style": {
+				"navigationBarTitleText": "收藏",
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/user/me",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/chat/creat",
+			"style": {
+				"navigationBarTitleText": "选择联系人",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/contacts/share",
+			"style": {
+				"navigationBarTitleText": "选择联系人",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/contacts/share_room",
+			"style": {
+				"navigationBarTitleText": "选择群聊",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/other/introduce",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/other/video",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/other/preview",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/other/webview",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/chat/chat_detail",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationBarBackgroundColor": "#F3F4F8",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/index/creat_role",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/index/creat_subtype",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/index/creat_content",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/contacts/add_contacts",
+			"style": {
+				"navigationBarTitleText": "添加",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/user/register",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/contacts/card",
+			"style": {
+				"navigationBarTitleText": "名片",
+				"navigationBarBackgroundColor": "#F3F4F8",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/contacts/more",
+			"style": {
+				"navigationBarTitleText": "资料设置",
+				"navigationBarBackgroundColor": "#F3F4F8",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/user/info",
+			"style": {
+				"navigationBarTitleText": "个人信息",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/contacts/device",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300,
+					"titleNView": {
+						"buttons": [{
+							"width": "85px",
+							"color": "#FFEF4B5B",
+							"text": "",
+							"fontSize": "14px"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/contacts/device_sharelist",
+			"style": {
+				"navigationBarTitleText": "共享名单",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/place/creat_place",
+			"style": {
+				"navigationBarTitleText": "新建场所",
+				"navigationBarBackgroundColor": "#F3F4F8",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/place/list",
+			"style": {
+				"navigationBarTitleText": "场所",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/place/card",
+			"style": {
+				"navigationBarTitleText": "场所",
+				"navigationBarBackgroundColor": "#F3F4F8",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/place/run_list",
+			"style": {
+				"navigationBarTitleText": "运行名单",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/chat/run_position",
+			"style": {
+				"navigationBarTitleText": "运行位置",
+				"navigationBarBackgroundColor": "#F3F4F8",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/device/device_type",
+			"style": {
+				"navigationBarTitleText": "手动添加",
+				"navigationBarBackgroundColor": "#F3F4F8",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/device/add_device",
+			"style": {
+				"navigationBarTitleText": "添加设备",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/user/ercode",
+			"style": {
+				"navigationBarTitleText": "二维码名片",
+				"navigationBarBackgroundColor": "#F3F4F8",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/device/add_gw",
+			"style": {
+				"navigationBarTitleText": "添加网关",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/device/scan_device",
+			"style": {
+				"navigationBarTitleText": "扫描设备",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/index/search",
+			"style": {
+				"navigationBarTitleText": "搜索",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/user/run",
+			"style": {
+				"navigationBarTitleText": "运行位置",
+				"navigationBarBackgroundColor": "#F3F4F8",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/chat/choose",
+			"style": {
+				"navigationBarTitleText": "选择提醒的人",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/device/application_card",
+			"style": {
+				"navigationBarTitleText": "应用信息",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/device/smart_setting",
+			"style": {
+				"navigationBarTitleText": "小助手",
+				"navigationBarBackgroundColor": "#F3F4F8",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/device/add_list",
+			"style": {
+				"navigationBarTitleText": "手动添加",
+				"navigationBarBackgroundColor": "#F3F4F8",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/device/application_market",
+			"style": {
+				"navigationBarTitleText": "应用市场",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/device/appslist",
+			"style": {
+				"navigationBarTitleText": "应用",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/contacts/add_card",
+			"style": {
+				"navigationBarTitleText": "名片",
+				"navigationBarBackgroundColor": "#F3F4F8",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/chat/chat_add_member",
+			"style": {
+				"navigationBarTitleText": "选择要添加的成员",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/contacts/new_contact",
+			"style": {
+				"navigationBarTitleText": "新的好友",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/other/ar",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		}
+	],
+	"tabBar": {
+		"color": "#4F5360",
+		"selectedColor": "#694BE1",
+		"borderStyle": "#F3F4F8",
+		"iconWidth": "22px",
+		"fontSize": "10px",
+		"spacing": "3px",
+		"height": "49px",
+		"list": [{
+				"pagePath": "pages/chat/list",
+				"text": "对话",
+				"iconPath": "static/tabbar/chat_1.png",
+				"selectedIconPath": "static/tabbar/chat_2.png"
+			},
+			{
+				"pagePath": "pages/contacts/contacts",
+				"text": "联系人",
+				"iconPath": "static/tabbar/contacts_1.png",
+				"selectedIconPath": "static/tabbar/contacts_2.png"
+			},
+			{
+				"pagePath": "pages/other/ar",
+				"text": "AR",
+				"iconPath": "static/tabbar/ar_1.png",
+				"selectedIconPath": "static/tabbar/ar_2.png"
+			},
+			{
+				"pagePath": "pages/user/me",
+				"text": "我",
+				"iconPath": "static/tabbar/me_1.png",
+				"selectedIconPath": "static/tabbar/me_2.png"
+			}
+		]
+	},
+	"globalStyle": {
+		"scrollIndicator": "none",
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "WuChat",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#ffffff"
+	},
+	"condition": {
+		"current": 0,
+		"list": []
+	}
+}
