@@ -631,20 +631,14 @@
 		"list": [{
 				"pagePath": "pages/chat/list",
 				"text": "对话",
-				"iconPath": "static/tabbar/chat_1.png",
-				"selectedIconPath": "static/tabbar/chat_2.png"
+				"iconPath": "static/tabbar/home.png",
+				"selectedIconPath": "static/tabbar/home1.png"
 			},
 			{
 				"pagePath": "pages/contacts/contacts",
 				"text": "联系人",
 				"iconPath": "static/tabbar/contacts_1.png",
 				"selectedIconPath": "static/tabbar/contacts_2.png"
-			},
-			{
-				"pagePath": "pages/other/ar",
-				"text": "AR",
-				"iconPath": "static/tabbar/ar_1.png",
-				"selectedIconPath": "static/tabbar/ar_2.png"
 			},
 			{
 				"pagePath": "pages/user/me",
