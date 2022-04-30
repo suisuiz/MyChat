@@ -1,0 +1,48 @@
+<!--
+ * @Descripttion: 
+ * @Author: SUI
+ * @Date: 2021-10-21 15:17:26
+ * @LastEditors: SUI
+ * @LastEditTime: 2021-10-21 16:19:30
+ * @FilePath: \things\pages\other\ar.vue
+-->
+<template>
+	<view>
+		<view :style="{ height: statusBarHeight }"></view>
+		<web-view :style="{ height: webViewHeight }" :webview-styles="webviewStyles" :src="url"></web-view>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				statusBarHeight: '0px',
+				webViewHeight: '0px',
+				// 加载的进度条颜色
+				webviewStyles: {
+					progress: {
+						color: '#F4F5FA'
+					}
+				},
+				url: 'https://t-arbook.biaddti.com/'
+			}
+		},
+
+		onShow() {
+			let that = this
+			uni.getSystemInfo({
+				success: (res) => {
+					// 获取状态栏高度
+					let statusBarHeight = uni.getSystemInfoSync().statusBarHeight
+					// console.log(statusBarHeight)
+					that.statusBarHeight = statusBarHeight + 'px'
+					that.webViewHeight = res.windowHeight - statusBarHeight + 'px'
+				}
+			})
+		},
+		methods: {}
+	}
+</script>
+
+<style scoped></style>
