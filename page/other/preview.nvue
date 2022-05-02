@@ -1,0 +1,85 @@
+<!--
+ * @Descripttion: 播放视频
+ * @Author: SUI
+ * @Company: chorustek
+ * @Date: 2020-10-26 15:00:50
+ * @Version: 1.0.0
+ * @LastEditors: SUI
+ * @LastEditTime: 2021-06-23 12:20:20
+ * @FilePath: \things\pages\other\preview.nvue
+-->
+<template>
+  <view class="wrap">
+    <video class="video" id="myVideo" :src="src" @error="videoErrorCallback" autoplay show-mute-btn controls></video>
+
+    <view class="close_box" @click="close">
+      <image class="close" src="/static/img/other/closev.png" mode=""></image>
+    </view>
+  </view>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      src: ''
+    }
+  },
+  onLoad({ url }) {
+    console.log(url)
+    this.src = url
+  },
+  onReady(res) {
+    /* MP-ALIPAY 不编译，其他编译 */
+    // #ifndef MP-ALIPAY
+    this.videoContext = uni.createVideoContext('myVideo')
+    // this.videoContext.requestFullScreen();
+    // #endif
+  },
+  methods: {
+    videoErrorCallback(e) {
+      uni.showModal({
+        content: e.target.errMsg,
+        showCancel: false
+      })
+    },
+
+    close() {
+      uni.navigateBack({
+        delta: 1
+      })
+    }
+  }
+}
+</script>
+
+<style scoped>
+/* APP-PLUS 不编译，其他编译 */
+/* #ifndef APP-PLUS */
+page {
+  min-height: 100%;
+}
+
+/* #endif */
+.wrap {
+  flex: 1;
+  background-color: #ffffff;
+}
+
+.video {
+  flex: 1;
+}
+
+.close_box {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  z-index: 999;
+  padding: 10px;
+}
+
+.close {
+  width: 16px;
+  height: 16px;
+}
+</style>
