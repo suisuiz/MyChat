@@ -2,7 +2,7 @@
  * @Descripttion: 工业质检
  * @Author: SUI
  * @LastEditors: SUI
- * @LastEditTime: 2022-05-08 12:03:19
+ * @LastEditTime: 2022-05-08 12:11:21
  * @FilePath: \MyChat\pages\chat\room\chat_booth.vue
 -->
 <template>
