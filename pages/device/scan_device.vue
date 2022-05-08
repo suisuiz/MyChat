@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 扫描设备
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-06-21 18:32:38
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-11-12 14:38:26
- * @FilePath: \things\pages\device\scan_device.vue
+ * @LastEditTime: 2022-05-08 12:01:22
+ * @FilePath: \MyChat\pages\device\scan_device.vue
 -->
 <template>
   <view class="page" v-if="pageLoad">

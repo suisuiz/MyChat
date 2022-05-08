@@ -1,15 +1,14 @@
 <!--
  * @Descripttion: 上传文件
  * @Author: SUI
- * @Date: 2021-12-09 18:28:59
- * @LastEditors: SUI
- * @LastEditTime: 2021-12-22 15:42:01
- * @FilePath: \things\components\contents\UploadFile\UploadFile.vue
+ * @LastEditTime: 2022-05-08 11:51:06
+ * @FilePath: \MyChat\components\contents\UploadFile\UploadFile.vue
 -->
 <template>
   <view>
     <!-- 上传文件 -->
     <lsj-upload ref="lsjUpload" height="100%" :childId="id" :size="2048" :option="option" position="static" v-model="percent" @input="onInput" @callback="onCallback">
+      <!-- 这里可以自定义上传样式 -->
       <!-- <view class="btn" style="height: 180rpx">选择附件上传</view> -->
       <view class="btn"><rich-text :nodes="msgnodes"></rich-text></view>
     </lsj-upload>

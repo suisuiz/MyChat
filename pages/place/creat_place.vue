@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 新建场所
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-06-15 10:29:52
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-11-29 17:54:47
- * @FilePath: \things\pages\place\creat_place.vue
+ * @LastEditTime: 2022-05-08 11:58:53
+ * @FilePath: \MyChat\pages\place\creat_place.vue
 -->
 <template>
   <view v-if="pageLoad" class="page">

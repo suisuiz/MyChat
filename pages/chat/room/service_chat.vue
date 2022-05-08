@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 聊天-服务号
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-03-23 10:04:11
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-12-22 18:25:22
- * @FilePath: \things\pages\chat\room\service_chat.vue
+ * @LastEditTime: 2022-05-08 12:03:27
+ * @FilePath: \MyChat\pages\chat\room\service_chat.vue
 -->
 <template>
   <view v-if="pageLoad" class="chat-page">

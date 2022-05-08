@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 应用市场
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-07-02 11:48:55
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-12-21 14:47:14
- * @FilePath: \things\pages\device\application_market.vue
+ * @LastEditTime: 2022-05-08 12:01:06
+ * @FilePath: \MyChat\pages\device\application_card.vue
 -->
 <template>
   <view class="page" v-if="pageLoad">

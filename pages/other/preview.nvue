@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 播放视频
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-10-26 15:00:50
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-06-23 12:20:20
- * @FilePath: \things\pages\other\preview.nvue
+ * @LastEditTime: 2022-05-08 11:59:50
+ * @FilePath: \MyChat\pages\other\preview.nvue
 -->
 <template>
   <view class="wrap">

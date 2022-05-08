@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 设备分享-联系人列表
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-10-22 11:28:02
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-08-30 10:55:21
- * @FilePath: \things\pages\contacts\share.vue
+ * @LastEditTime: 2022-05-08 12:02:25
+ * @FilePath: \MyChat\pages\contacts\share.vue
 -->
 <template>
   <view class="body" v-if="pageLoad">

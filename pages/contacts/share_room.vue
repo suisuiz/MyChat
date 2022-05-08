@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 分享到群--展示群列表
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-10-22 11:28:02
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-10-08 15:43:27
- * @FilePath: \things\pages\contacts\share_room.vue
+ * @LastEditTime: 2022-05-08 12:02:11
+ * @FilePath: \MyChat\pages\contacts\share_room.vue
 -->
 <template>
   <view class="body" v-if="pageLoad">

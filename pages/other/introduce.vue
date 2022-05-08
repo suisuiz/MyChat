@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-10-22 15:09:05
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-08-30 10:59:02
- * @FilePath: \things\pages\other\introduce.vue
+ * @LastEditTime: 2022-05-08 11:59:42
+ * @FilePath: \MyChat\pages\other\introduce.vue
 -->
 <template>
   <view class="page">

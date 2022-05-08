@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 场所名片
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-06-15 12:09:20
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-08-30 10:59:21
- * @FilePath: \things\pages\place\card.vue
+ * @LastEditTime: 2022-05-08 11:59:00
+ * @FilePath: \MyChat\pages\place\card.vue
 -->
 <template>
   <view v-if="pageLoad" class="page">

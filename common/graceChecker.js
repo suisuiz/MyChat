@@ -1,33 +1,44 @@
 /*
  * @Descripttion: 表单校验
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-10-17 10:41:26
- * @Version: 1.0.0
- * @LastEditors: SUI
- * @LastEditTime: 2021-04-16 09:30:39
- * @FilePath: \things\common\graceChecker.js
+ * @LastEditTime: 2022-05-08 11:47:37
+ * @FilePath: \MyChat\common\graceChecker.js
  */
 module.exports = {
-	error:'',
-	check : function (data, rule){
-		for(var i = 0; i < rule.length; i++){
-			if (!rule[i].checkType){return true;}
-			if (!rule[i].name) {return true;}
-			if (!rule[i].errorMsg) {return true;}
-			if (!data[rule[i].name]) {this.error = rule[i].errorMsg; return false;}
-			switch (rule[i].checkType){
+	error: '',
+	check(data, rule) {
+		for (var i = 0; i < rule.length; i++) {
+			if (!rule[i].checkType) {
+				return true;
+			}
+			if (!rule[i].name) {
+				return true;
+			}
+			if (!rule[i].errorMsg) {
+				return true;
+			}
+			if (!data[rule[i].name]) {
+				this.error = rule[i].errorMsg;
+				return false;
+			}
+			switch (rule[i].checkType) {
 				case 'string':
 					var reg = new RegExp('^.{' + rule[i].checkRule + '}$');
-					if(!reg.test(data[rule[i].name])) {this.error = rule[i].errorMsg; return false;}
-				break;
+					if (!reg.test(data[rule[i].name])) {
+						this.error = rule[i].errorMsg;
+						return false;
+					}
+					break;
 				case 'int':
 					var reg = new RegExp('^(-[1-9]|[1-9])[0-9]{' + rule[i].checkRule + '}$');
-					if(!reg.test(data[rule[i].name])) {this.error = rule[i].errorMsg; return false;}
+					if (!reg.test(data[rule[i].name])) {
+						this.error = rule[i].errorMsg;
+						return false;
+					}
 					break;
-				break;
+					break;
 				case 'between':
-					if (!this.isNumber(data[rule[i].name])){
+					if (!this.isNumber(data[rule[i].name])) {
 						this.error = rule[i].errorMsg;
 						return false;
 					}
@@ -38,10 +49,13 @@ module.exports = {
 						this.error = rule[i].errorMsg;
 						return false;
 					}
-				break;
+					break;
 				case 'betweenD':
 					var reg = /^-?[1-9][0-9]?$/;
-					if (!reg.test(data[rule[i].name])) { this.error = rule[i].errorMsg; return false; }
+					if (!reg.test(data[rule[i].name])) {
+						this.error = rule[i].errorMsg;
+						return false;
+					}
 					var minMax = rule[i].checkRule.split(',');
 					minMax[0] = Number(minMax[0]);
 					minMax[1] = Number(minMax[1]);
@@ -49,10 +63,13 @@ module.exports = {
 						this.error = rule[i].errorMsg;
 						return false;
 					}
-				break;
-				case 'betweenF': 
+					break;
+				case 'betweenF':
 					var reg = /^-?[0-9][0-9]?.+[0-9]+$/;
-					if (!reg.test(data[rule[i].name])){this.error = rule[i].errorMsg; return false;}
+					if (!reg.test(data[rule[i].name])) {
+						this.error = rule[i].errorMsg;
+						return false;
+					}
 					var minMax = rule[i].checkRule.split(',');
 					minMax[0] = Number(minMax[0]);
 					minMax[1] = Number(minMax[1]);
@@ -60,42 +77,64 @@ module.exports = {
 						this.error = rule[i].errorMsg;
 						return false;
 					}
-				break;
+					break;
 				case 'same':
-					if (data[rule[i].name] != rule[i].checkRule) { this.error = rule[i].errorMsg; return false;}
-				break;
+					if (data[rule[i].name] != rule[i].checkRule) {
+						this.error = rule[i].errorMsg;
+						return false;
+					}
+					break;
 				case 'notsame':
-					if (data[rule[i].name] == rule[i].checkRule) { this.error = rule[i].errorMsg; return false; }
-				break;
+					if (data[rule[i].name] == rule[i].checkRule) {
+						this.error = rule[i].errorMsg;
+						return false;
+					}
+					break;
 				case 'email':
 					var reg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-					if (!reg.test(data[rule[i].name])) { this.error = rule[i].errorMsg; return false; }
-				break;
+					if (!reg.test(data[rule[i].name])) {
+						this.error = rule[i].errorMsg;
+						return false;
+					}
+					break;
 				case 'phoneno':
 					var reg = /^1[0-9]{10,10}$/;
-					if (!reg.test(data[rule[i].name])) { this.error = rule[i].errorMsg; return false; }
-				break;
+					if (!reg.test(data[rule[i].name])) {
+						this.error = rule[i].errorMsg;
+						return false;
+					}
+					break;
 				case 'zipcode':
 					var reg = /^[0-9]{6}$/;
-					if (!reg.test(data[rule[i].name])) { this.error = rule[i].errorMsg; return false; }
-				break;
+					if (!reg.test(data[rule[i].name])) {
+						this.error = rule[i].errorMsg;
+						return false;
+					}
+					break;
 				case 'reg':
 					var reg = new RegExp(rule[i].checkRule);
-					if (!reg.test(data[rule[i].name])) { this.error = rule[i].errorMsg; return false; }
-				break;
-				case 'in':
-					if(rule[i].checkRule.indexOf(data[rule[i].name]) == -1){
-						this.error = rule[i].errorMsg; return false;
+					if (!reg.test(data[rule[i].name])) {
+						this.error = rule[i].errorMsg;
+						return false;
 					}
-				break;
+					break;
+				case 'in':
+					if (rule[i].checkRule.indexOf(data[rule[i].name]) == -1) {
+						this.error = rule[i].errorMsg;
+						return false;
+					}
+					break;
 				case 'notnull':
-					if(data[rule[i].name] == null || data[rule[i].name].length < 1){this.error = rule[i].errorMsg; return false;}
-				break;
+					if (data[rule[i].name] == null || data[rule[i].name].length < 1) {
+						this.error = rule[i].errorMsg;
+						return false;
+					}
+					break;
 			}
 		}
 		return true;
 	},
-	isNumber : function (checkVal){
+	isNumber(checkVal) {
 		var reg = /^-?[1-9][0-9]?.?[0-9]*$/;
 		return reg.test(checkVal);
 	}

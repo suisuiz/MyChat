@@ -1,12 +1,8 @@
 <!--
  * @Descripttion: 入口
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-10-15 16:24:45
- * @Version: 1.0.0
- * @LastEditors: SUI
- * @LastEditTime: 2021-11-25 19:12:48
- * @FilePath: \things\App.vue
+ * @LastEditTime: 2022-05-08 11:48:53
+ * @FilePath: \MyChat\App.vue
 -->
 <script>
 // 引入接口

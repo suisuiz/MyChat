@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 聊天详情--操作
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-11-05 15:20:18
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-08-30 10:47:58
- * @FilePath: \things\pages\chat\chat_detail.vue
+ * @LastEditTime: 2022-05-08 12:02:50
+ * @FilePath: \MyChat\pages\chat\chat_detail.vue
 -->
 <template>
   <view class="page" v-if="pageLoad">

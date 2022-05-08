@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 更多，共享、转发、删除
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-05-25 10:47:15
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-08-30 10:54:59
- * @FilePath: \things\pages\contacts\more.vue
+ * @LastEditTime: 2022-05-08 12:01:59
+ * @FilePath: \MyChat\pages\contacts\more.vue
 -->
 <template>
   <view class="wrap">

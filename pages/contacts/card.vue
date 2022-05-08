@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 联系人卡片
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-03-23 14:20:59
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-09-29 16:35:47
- * @FilePath: \things\pages\contacts\card.vue
+ * @LastEditTime: 2022-05-08 12:01:45
+ * @FilePath: \MyChat\pages\contacts\card.vue
 -->
 <template>
   <view class="wrap" v-if="pageLoad">

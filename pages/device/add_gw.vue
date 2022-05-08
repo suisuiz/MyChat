@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 添加网关
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-06-21 14:29:00
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-07-13 15:48:26
- * @FilePath: \things\pages\device\add_gw.vue
+ * @LastEditTime: 2022-05-08 12:00:59
+ * @FilePath: \MyChat\pages\device\add_gw.vue
 -->
 <template>
   <view v-if="pageLoad">

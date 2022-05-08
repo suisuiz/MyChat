@@ -1,10 +1,9 @@
 <!--
  * @Descripttion: 新的朋友
  * @Author: SUI
- * @Date: 2021-09-30 14:52:36
  * @LastEditors: SUI
- * @LastEditTime: 2021-09-30 15:15:13
- * @FilePath: \things\pages\contacts\new_contact.vue
+ * @LastEditTime: 2022-05-08 12:02:03
+ * @FilePath: \MyChat\pages\contacts\new_contact.vue
 -->
 <template>
   <view v-if="pageLoad">

@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 选择提醒的人 @功能
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-06-25 10:36:56
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-09-29 11:22:54
- * @FilePath: \things\pages\chat\choose.vue
+ * @LastEditTime: 2022-05-08 12:02:45
+ * @FilePath: \MyChat\pages\chat\choose.vue
 -->
 <template>
   <view v-if="pageLoad">

@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 搜索、添加联系人
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-03-02 15:45:39
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-09-29 16:09:52
- * @FilePath: \things\pages\contacts\add_contacts.vue
+ * @LastEditTime: 2022-05-08 12:01:42
+ * @FilePath: \MyChat\pages\contacts\add_contacts.vue
 -->
 <template>
   <view class="body">

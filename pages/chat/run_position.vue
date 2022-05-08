@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 运行位置
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-06-15 14:51:58
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-08-30 10:50:14
- * @FilePath: \things\pages\chat\run_position.vue
+ * @LastEditTime: 2022-05-08 12:02:34
+ * @FilePath: \MyChat\pages\chat\run_position.vue
 -->
 <template>
   <view v-if="pageLoad" class="page">

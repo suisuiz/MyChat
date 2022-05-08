@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 注册页面
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-03-02 15:45:39
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-10-20 09:48:36
- * @FilePath: \things\pages\user\register.vue
+ * @LastEditTime: 2022-05-08 11:57:17
+ * @FilePath: \MyChat\pages\user\register.vue
 -->
 <template>
   <view class="page" v-if="pageLoad">

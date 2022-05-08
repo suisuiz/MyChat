@@ -1,10 +1,8 @@
 <!--
  * @Descripttion: 加号添加成员
  * @Author: SUI
- * @Date: 2021-09-15 15:17:44
- * @LastEditors: SUI
- * @LastEditTime: 2021-11-22 15:23:52
- * @FilePath: \things\pages\chat\chat_add_member.vue
+ * @LastEditTime: 2022-05-08 12:02:57
+ * @FilePath: \MyChat\pages\chat\chat_add_member.vue
 -->
 <template>
   <view class="body" v-if="pageLoad">

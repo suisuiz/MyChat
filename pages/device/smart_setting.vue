@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 智能助手
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-07-01 15:55:57
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-08-05 11:01:25
- * @FilePath: \things\pages\device\smart_setting.vue
+ * @LastEditTime: 2022-05-08 12:01:27
+ * @FilePath: \MyChat\pages\device\smart_setting.vue
 -->
 <template>
   <view class="page" v-if="pageLoad">
@@ -24,11 +21,7 @@
             </view>
           </view>
           <view>
-            <image
-              class="recommend-item-shop"
-              mode="aspectFill"
-              :src="item.shop"
-            ></image>
+            <image class="recommend-item-shop" mode="aspectFill" :src="item.shop"></image>
           </view>
         </view>
         <view class="recommend-line"></view>
@@ -44,38 +37,14 @@
       <!-- 内容 -->
       <view class="mask-bottom">
         <!-- 第一部分 -->
-        <view
-          class="mask-bottom-wrap"
-          @touchstart="touchstart"
-          @touchend="touchend"
-          v-if="!showChat"
-        >
+        <view class="mask-bottom-wrap" @touchstart="touchstart" @touchend="touchend" v-if="!showChat">
           <view class="mask-box">
             <!-- 聊天 -->
             <view class="mask-chat" @touchstart="chattouchstart">
               <!-- 聊天展示 -->
-              <scroll-view
-                class="chat-scroll"
-                scroll-y
-                :scroll-with-animation="scrollAnimation"
-                :scroll-top="scrollTop"
-                :scroll-into-view="scrollToView"
-              >
-                <view
-                  class="chat-scroll-item"
-                  :class="
-                    item.type == 1 ? 'chat-scroll-me' : 'chat-scroll-other'
-                  "
-                  :id="'msg' + index"
-                  v-for="(item, index) in chatList"
-                  :key="index"
-                  ><view
-                    class="chat-scroll-chat"
-                    :class="
-                      item.type == 1 ? 'chat-scroll-me' : 'chat-scroll-other'
-                    "
-                    >{{ item.text }}</view
-                  ></view
+              <scroll-view class="chat-scroll" scroll-y :scroll-with-animation="scrollAnimation" :scroll-top="scrollTop" :scroll-into-view="scrollToView">
+                <view class="chat-scroll-item" :class="item.type == 1 ? 'chat-scroll-me' : 'chat-scroll-other'" :id="'msg' + index" v-for="(item, index) in chatList" :key="index"
+                  ><view class="chat-scroll-chat" :class="item.type == 1 ? 'chat-scroll-me' : 'chat-scroll-other'">{{ item.text }}</view></view
                 >
               </scroll-view>
               <!-- 输入框 -->
@@ -89,26 +58,14 @@
                     <input v-model="inputVal" />
                   </view>
                   <!-- 语音按钮 -->
-                  <view class="chat-bottom-voicebtn" v-if="isVoice"
-                    >按住 说话</view
-                  >
+                  <view class="chat-bottom-voicebtn" v-if="isVoice">按住 说话</view>
                   <!-- 文字按钮 -->
                   <view class="chat-bottom-send" @tap="chatSend">发送</view>
                 </view>
                 <!-- 滑动蒙版 -->
-                <view
-                  class="chat-mask"
-                  v-if="isVoice"
-                  @touchstart="voiceBegin"
-                  @touchmove.stop.prevent="voiceIng"
-                  @touchend="voiceEnd"
-                  @touchcancel="voiceCancel"
-                ></view>
+                <view class="chat-mask" v-if="isVoice" @touchstart="voiceBegin" @touchmove.stop.prevent="voiceIng" @touchend="voiceEnd" @touchcancel="voiceCancel"></view>
                 <!-- 语音输入框 -->
-                <view
-                  class="chat-voice"
-                  :class="willStop ? 'change-voice' : ''"
-                  v-if="recording"
+                <view class="chat-voice" :class="willStop ? 'change-voice' : ''" v-if="recording"
                   >{{ recordTis }}
                   <view class="uni-icon uni-icon-trash chat-voice-icon"></view>
                 </view>
@@ -119,17 +76,8 @@
         <!-- 第二部分 -->
         <view class="mask-bottom-content">
           <scroll-view class="scroll-view" scroll-x>
-            <view
-              class="scroll-view-item"
-              v-for="(item, index) in imageList"
-              :key="index"
-              @click="scrollEvent(item.id)"
-            >
-              <image
-                class="scroll-view-img"
-                mode="aspectFill"
-                :src="item.img"
-              ></image>
+            <view class="scroll-view-item" v-for="(item, index) in imageList" :key="index" @click="scrollEvent(item.id)">
+              <image class="scroll-view-img" mode="aspectFill" :src="item.img"></image>
             </view>
           </scroll-view>
         </view>

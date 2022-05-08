@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 新建群聊---聊天室操作
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-10-19 10:10:37
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-10-08 15:39:13
- * @FilePath: \things\pages\chat\creat.vue
+ * @LastEditTime: 2022-05-08 12:02:42
+ * @FilePath: \MyChat\pages\chat\creat.vue
 -->
 <template>
   <view class="body" v-if="pageLoad">

@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 对话列表
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-10-15 18:56:40
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-12-21 20:27:01
- * @FilePath: \things\pages\chat\list.vue
+ * @LastEditTime: 2022-05-08 12:02:38
+ * @FilePath: \MyChat\pages\chat\list.vue
 -->
 <template>
   <view class="body" v-if="pageLoad">

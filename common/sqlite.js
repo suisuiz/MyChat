@@ -1,12 +1,9 @@
 /*
  * @Descripttion: 说明
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-04-23 18:54:44
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-08-23 19:11:28
- * @FilePath: \things\common\sqlite.js
+ * @LastEditTime: 2022-05-08 11:50:15
+ * @FilePath: \MyChat\common\sqlite.js
  */
 module.exports = {
   dbName: 'wuchat', // 数据库名称

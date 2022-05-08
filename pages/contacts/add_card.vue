@@ -1,10 +1,9 @@
 <!--
  * @Descripttion: 名片添加
  * @Author: SUI
- * @Date: 2021-08-04 10:56:54
  * @LastEditors: SUI
- * @LastEditTime: 2021-09-22 10:38:05
- * @FilePath: \things\pages\contacts\add_card.vue
+ * @LastEditTime: 2022-05-08 12:02:16
+ * @FilePath: \MyChat\pages\contacts\add_card.vue
 -->
 <template>
   <view class="wrap" v-if="pageLoad">

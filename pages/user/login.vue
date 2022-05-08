@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 登录页面
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-10-28 15:42:12
- * @Version: 1.0.0
  * @LastEditors: SUI
  * @LastEditTime: 2021-08-30 11:00:19
- * @FilePath: \things\pages\user\login.vue
+ * @FilePath: \MyChat\pages\user\login.vue
 -->
 <template>
   <view class="page" v-if="pageLoad">
@@ -113,7 +110,7 @@ export default {
           uni.setStorageSync('localAddress', res.UserInfo.LocalAddress)
           uni.setStorageSync('btAddress', res.UserInfo.BTAddress)
           uni.setStorageSync('site', res.UserInfo.Site)
-					uni.setStorageSync('gatewayId', res.UserInfo.GatewayId)
+          uni.setStorageSync('gatewayId', res.UserInfo.GatewayId)
           // update sqlite dbPath
           require('@/common/sqlite.js').updatePath(res.UserInfo.UserId)
 

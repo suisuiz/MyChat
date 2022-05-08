@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 共享设备、公开设备
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-06-07 09:42:00
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-08-30 10:54:50
- * @FilePath: \things\pages\contacts\device.vue
+ * @LastEditTime: 2022-05-08 12:01:56
+ * @FilePath: \MyChat\pages\contacts\device.vue
 -->
 <template>
   <view v-if="pageLoad" class="page">

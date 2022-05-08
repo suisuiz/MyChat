@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 添加设备
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-06-21 10:51:28
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-07-14 10:31:53
- * @FilePath: \things\pages\device\add_device.vue
+ * @LastEditTime: 2022-05-08 12:00:55
+ * @FilePath: \MyChat\pages\device\add_device.vue
 -->
 <template>
   <view v-if="pageLoad">
@@ -24,9 +21,7 @@
         <input type="text" placeholder="请填写设备名称" v-model="inputName" />
         <view class="mask_bottom uni-flex-ali">
           <!-- <text class="cancels">取消</text> -->
-          <text class="confirm" v-if="notifyId == ''" @tap="confirmBtn"
-            >确定</text
-          >
+          <text class="confirm" v-if="notifyId == ''" @tap="confirmBtn">确定</text>
           <text class="confirm" v-if="notifyId != ''" @tap="rename">确定</text>
         </view>
       </view>

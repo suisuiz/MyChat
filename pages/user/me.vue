@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 我的
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-10-15 16:33:36
- * @Version: 1.0.0
  * @LastEditors: SUI
  * @LastEditTime: 2021-09-26 08:37:07
- * @FilePath: \things\pages\user\me.vue
+ * @FilePath: \MyChat\pages\user\me.vue
 -->
 <template>
   <view v-if="pageLoad" class="page">

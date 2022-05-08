@@ -1,12 +1,9 @@
 /*
  * @Descripttion: NVUE-CSS
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-10-17 10:41:26
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-04-16 09:32:14
- * @FilePath: \things\common\uni-nvue.css
+ * @LastEditTime: 2022-05-08 11:52:38
+ * @FilePath: \MyChat\static\css\uni-nvue.css
  */
 
 /* APP-PLUS-NVUE 不编译，其他编译 */
@@ -15,6 +12,7 @@ page {
     min-height: 100%;
     height: auto;
 }
+
 /* #endif */
 
 /* 解决头条小程序字体图标不显示问题，因为头条运行时自动插入了span标签，且有全局字体 */
@@ -74,6 +72,7 @@ page {
     align-items: center;
     padding: 12px;
 }
+
 /*
 .uni-panel-h:active {
     background-color: #f8f8f8;

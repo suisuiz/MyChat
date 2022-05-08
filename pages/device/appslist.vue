@@ -1,40 +1,22 @@
 <!--
  * @Descripttion: 所有应用
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-07-05 15:11:25
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-07-05 18:15:59
- * @FilePath: \things\pages\device\appslist.vue
+ * @LastEditTime: 2022-05-08 12:01:13
+ * @FilePath: \MyChat\pages\device\appslist.vue
 -->
 <template>
   <view class="page" v-if="pageLoad">
     <view class="padding">
-      <view
-        v-for="(item, index) in appsData"
-        :key="index"
-        class="item-box uni-flex-jus"
-        @tap.stop="info(item.appid)"
-      >
+      <view v-for="(item, index) in appsData" :key="index" class="item-box uni-flex-jus" @tap.stop="info(item.appid)">
         <view class="left uni-flex-ali">
-          <image
-            class="img"
-            :src="item.image"
-            mode=""
-            @error="imageError(item)"
-          ></image>
+          <image class="img" :src="item.image" mode="" @error="imageError(item)"></image>
           <view>
             <view class="name">{{ item.name }}</view>
             <view class="content">{{ item.desc }}</view>
           </view>
         </view>
-        <view
-          class="uni-flex-center"
-          :class="!item.installed ? 'status-new' : 'status-old'"
-          @tap.stop="download(item)"
-          >{{ item.installed ? '已下载' : '下载' }}</view
-        >
+        <view class="uni-flex-center" :class="!item.installed ? 'status-new' : 'status-old'" @tap.stop="download(item)">{{ item.installed ? '已下载' : '下载' }}</view>
       </view>
     </view>
   </view>

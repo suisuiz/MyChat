@@ -1,12 +1,8 @@
 /*
  * @Descripttion: main.js
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-10-15 16:24:45
- * @Version: 1.0.0
- * @LastEditors: SUI
- * @LastEditTime: 2021-04-16 09:47:20
- * @FilePath: \things\main.js
+ * @LastEditTime: 2022-05-08 11:48:29
+ * @FilePath: \MyChat\main.js
  */
 
 import Vue from 'vue';

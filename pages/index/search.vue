@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 搜索
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-06-22 16:55:43
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-08-30 10:58:39
- * @FilePath: \things\pages\index\search.vue
+ * @LastEditTime: 2022-05-08 12:00:26
+ * @FilePath: \MyChat\pages\index\search.vue
 -->
 <template>
   <view>

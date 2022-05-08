@@ -1,10 +1,8 @@
 /*
  * @Descripttion: mdns 切换 IP
  * @Author: SUI
- * @Date: 2021-07-26 10:47:36
- * @LastEditors: SUI
- * @LastEditTime: 2021-10-19 13:35:33
- * @FilePath: \things\common\mdns.js
+ * @LastEditTime: 2022-05-08 11:49:43
+ * @FilePath: \MyChat\common\mdns.js
  */
 let websocket = require('@/common/websocket.js')
 

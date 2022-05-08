@@ -1,12 +1,9 @@
 /*
  * @Descripttion: 
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-10-17 10:41:26
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-11-05 16:18:27
- * @FilePath: \things\common\util.js
+ * @LastEditTime: 2022-05-08 11:50:21
+ * @FilePath: \MyChat\common\util.js
  */
 
 

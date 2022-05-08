@@ -1,10 +1,8 @@
 <!--
  * @Descripttion: 点击右上角弹出
  * @Author: SUI
- * @Date: 2021-09-01 14:34:05
- * @LastEditors: SUI
- * @LastEditTime: 2021-12-09 18:36:25
- * @FilePath: \things\components\contents\UpperRightPlus\UpperRightPlus.vue
+ * @LastEditTime: 2022-05-08 11:52:06
+ * @FilePath: \MyChat\components\contents\UpperRightPlus\UpperRightPlus.vue
 -->
 <template>
   <view>

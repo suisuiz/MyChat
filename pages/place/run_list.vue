@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 场所运行群名单
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-06-15 14:34:27
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-08-30 10:59:40
- * @FilePath: \things\pages\place\run_list.vue
+ * @LastEditTime: 2022-05-08 11:58:43
+ * @FilePath: \MyChat\pages\place\run_list.vue
 -->
 <template>
   <view v-if="pageLoad" class="page">

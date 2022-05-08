@@ -1,12 +1,8 @@
 /*
  * @Descripttion: 说明
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-10-17 10:41:26
- * @Version: 1.0.0
- * @LastEditors: SUI
- * @LastEditTime: 2021-04-16 09:31:28
- * @FilePath: \things\common\permission.js
+ * @LastEditTime: 2022-05-08 11:50:09
+ * @FilePath: \MyChat\common\permission.js
  */
 
 /// null = 未请求，1 = 已允许，0 = 拒绝|受限, 2 = 系统未开启
@@ -191,7 +187,7 @@ function requestAndroid(permissionID) {
     return new Promise((resolve, reject) => {
         plus.android.requestPermissions(
             [permissionID],
-            function(resultObj) {
+            function (resultObj) {
                 var result = 0;
                 for (var i = 0; i < resultObj.granted.length; i++) {
                     var grantedPermission = resultObj.granted[i];
@@ -210,7 +206,7 @@ function requestAndroid(permissionID) {
                 }
                 resolve(result);
             },
-            function(error) {
+            function (error) {
                 console.log('result error: ' + error.message)
                 resolve({
                     code: error.code,
@@ -245,7 +241,7 @@ function gotoAppPermissionSetting() {
 }
 
 const permission = {
-    get isIOS(){
+    get isIOS() {
         return typeof isIOS === 'boolean' ? isIOS : (isIOS = uni.getSystemInfoSync().platform === 'ios')
     },
     requestIOS: requestIOS,

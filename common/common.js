@@ -1,19 +1,13 @@
 /*
  * @Descripttion: 接口
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-10-21 16:46:24
- * @Version: 1.0.0
- * @LastEditors: SUI
- * @LastEditTime: 2021-12-22 18:03:34
- * @FilePath: \things\common\common.js
+ * @LastEditTime: 2022-05-08 11:47:07
+ * @FilePath: \MyChat\common\common.js
  */
 module.exports = {
-	// apiHost: "https://chorustek.com",
-	apiHost: "https://zk.club077.com:8080",
-	// apiHost: "https://192.168.1.199:8080",
-	socketHost: "https://zk.club077.com:8443",
-	// socketHost: "http://192.168.1.199:8443",
+	// 换上自己的 接口地址
+	apiHost: "https://xxx.com",
+	socketHost: "https://xxx.com",
 
 	json_add(a, b) {
 		if (a == undefined || a.length == 0) return b;
@@ -823,49 +817,6 @@ module.exports = {
 	},
 
 
-	// ----------------------------------------------------------------------------------------------------------------- //
-	// // 聊天室-历史
-	// chatHistory(data, cb) {
-	// 	this.request("/zk/history", "POST", data, (r) => {
-	// 		cb(r)
-	// 	})
-	// },
-
-	// // 收藏文档
-	// favorite(data, cb) {
-	// 	this.request("/zk/favorite", "POST", data, (r) => {
-	// 		cb(r)
-	// 	})
-	// },
-
-	// // 收藏列表
-	// favorited(data, cb) {
-	// 	this.request("/zk/favorites", "POST", data, (r) => {
-	// 		cb(r)
-	// 	})
-	// },
-
-	// // 改设备状态
-	// device_state(data, cb) {
-	// 	this.request("/zk/device_state", "POST", data, (r) => {
-	// 		cb(r)
-	// 	})
-	// },
-
-	// // 改灯亮度
-	// device_brightness(data, cb) {
-	// 	this.request("/zk/device_brightness", "POST", data, (r) => {
-	// 		cb(r)
-	// 	})
-	// },
-
-	// // 设备分享
-	// device_share(data, cb) {
-	// 	this.request("/zk/share", "POST", data, (r) => {
-	// 		cb(r)
-	// 	})
-	// },
-
 	// 视频推流-开始结束
 	device_object(data, cb) {
 		this.request("/zk/device_object", "POST", data, (r) => {
@@ -879,35 +830,6 @@ module.exports = {
 			cb(r)
 		})
 	},
-
-	// // 工业质检-开关
-	// device_light(data, cb) {
-	// 	this.request("/zk/device_light", "POST", data, (r) => {
-	// 		cb(r)
-	// 	})
-	// },
-
-	// // 工业质检-转盘
-	// device_motor(data, cb) {
-	// 	this.request("/zk/device_motor", "POST", data, (r) => {
-	// 		cb(r)
-	// 	})
-	// },
-
-	// // 机器人-唤起APP获取工业质检信息
-	// industrial_enter(data, cb) {
-	// 	this.request("/zk/industrial_enter", "POST", data, (r) => {
-	// 		cb(r)
-	// 	})
-	// },
-
-	// // 工业质检-JSON
-	// industrial_json(cb) {
-	// 	this.request("/demo/industrial.json", "GET", {}, (r) => {
-	// 		cb(r)
-	// 	})
-	// },
-
 
 	// 扫描设备
 	find_device(gatewayid, cb) {

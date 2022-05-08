@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 工业质检
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-10-22 11:04:47
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-08-31 10:04:31
- * @FilePath: \things\pages\chat\chat_booth.vue
+ * @LastEditTime: 2022-05-08 12:03:19
+ * @FilePath: \MyChat\pages\chat\room\chat_booth.vue
 -->
 <template>
   <view v-if="pageLoad" class="chat-page">

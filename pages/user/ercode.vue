@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 二维码名片
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-06-18 17:36:51
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-08-30 10:59:51
- * @FilePath: \things\pages\user\ercode.vue
+ * @LastEditTime: 2022-05-08 11:58:19
+ * @FilePath: \MyChat\pages\user\ercode.vue
 -->
 <template>
   <view v-if="pageLoad" class="page uni-flex-center">

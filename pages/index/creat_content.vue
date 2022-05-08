@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 说明
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-03-02 15:45:39
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-08-30 10:55:48
- * @FilePath: \things\pages\index\creat_content.vue
+ * @LastEditTime: 2022-05-08 12:00:36
+ * @FilePath: \MyChat\pages\index\creat_content.vue
 -->
 <template>
   <view class="page">

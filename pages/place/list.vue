@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 场所列表
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-06-15 11:58:04
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-08-30 10:59:34
- * @FilePath: \things\pages\place\list.vue
+ * @LastEditTime: 2022-05-08 11:58:49
+ * @FilePath: \MyChat\pages\place\list.vue
 -->
 <template>
   <view v-if="pageLoad" class="page">

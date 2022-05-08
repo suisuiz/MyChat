@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 手动添加
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-07-01 17:52:55
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-07-13 15:38:12
- * @FilePath: \things\pages\device\add_list.vue
+ * @LastEditTime: 2022-05-08 12:01:02
+ * @FilePath: \MyChat\pages\device\add_list.vue
 -->
 
 <template>

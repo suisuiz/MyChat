@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 聊天-单聊和群聊
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-10-15 16:32:00
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-12-21 10:04:05
- * @FilePath: \things\pages\chat\room\chat.vue
+ * @LastEditTime: 2022-05-08 12:03:23
+ * @FilePath: \MyChat\pages\chat\room\chat.vue
 -->
 <template>
   <view v-if="pageLoad" class="chat-page">

@@ -1,48 +1,24 @@
 <!--
  * @Descripttion: 手动添加 === 设备类型
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-06-21 10:51:28
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-06-22 16:40:59
- * @FilePath: \things\pages\device\device_type.vue
+ * @LastEditTime: 2022-05-08 12:01:17
+ * @FilePath: \MyChat\pages\device\device_type.vue
 -->
 <template>
   <view class="page" v-if="pageLoad">
     <!-- 设备列表 -->
     <view class="device-wrap">
       <scroll-view scroll-y class="aside" scroll-with-animation="true">
-        <view
-          :class="tabIndex === index ? 'menu active' : 'menu'"
-          v-for="(item, index) in deviceTypeList"
-          :key="index"
-          @click="tabMenu(index)"
-        >
+        <view :class="tabIndex === index ? 'menu active' : 'menu'" v-for="(item, index) in deviceTypeList" :key="index" @click="tabMenu(index)">
           {{ item.name }}
         </view>
       </scroll-view>
       <view class="item-content">
-        <scroll-view
-          class="box"
-          :scroll-into-view="toView"
-          scroll-y
-          @scroll="scroll"
-          scroll-with-animation="true"
-        >
-          <view
-            class="cate"
-            v-for="(item, index) in deviceTypeList"
-            :key="'A' + index"
-            :id="'A' + index"
-          >
+        <scroll-view class="box" :scroll-into-view="toView" scroll-y @scroll="scroll" scroll-with-animation="true">
+          <view class="cate" v-for="(item, index) in deviceTypeList" :key="'A' + index" :id="'A' + index">
             <!-- <view class="header">{{item.name}}</view> -->
-            <view
-              class="device-item"
-              v-for="(key, index) in item.list"
-              :key="'B' + index"
-              @click="binditem(key)"
-            >
+            <view class="device-item" v-for="(key, index) in item.list" :key="'B' + index" @click="binditem(key)">
               <image class="img" :src="key.image"></image>
               <text class="title">{{ key.name }}</text>
             </view>
@@ -57,36 +33,11 @@
       <view class="close" @click="maskBol = false"></view>
       <view class="center-wrap uni-column-center" @click.stop="maskBol = false">
         <view class="mask-box">
-          <scroll-view
-            :class="
-              gwList.length > 2
-                ? 'scroll_wrap3'
-                : gwList.length == 2
-                ? 'scroll_wrap2'
-                : 'scroll_wrap1'
-            "
-            scroll-y="true"
-            v-if="gwList.length != 0"
-          >
-            <view
-              class="item uni-flex-jus"
-              v-for="(item, index) in gwList"
-              :key="index"
-              @click.stop="change(index)"
-            >
+          <scroll-view :class="gwList.length > 2 ? 'scroll_wrap3' : gwList.length == 2 ? 'scroll_wrap2' : 'scroll_wrap1'" scroll-y="true" v-if="gwList.length != 0">
+            <view class="item uni-flex-jus" v-for="(item, index) in gwList" :key="index" @click.stop="change(index)">
               <text>{{ item.name }}</text>
-              <uni-icons
-                v-if="item.checked"
-                type="checkbox-filled"
-                color="#EF4B5B"
-                size="16"
-              />
-              <uni-icons
-                v-if="!item.checked"
-                type="checkbox-filled"
-                color="#C6CCDA"
-                size="16"
-              />
+              <uni-icons v-if="item.checked" type="checkbox-filled" color="#EF4B5B" size="16" />
+              <uni-icons v-if="!item.checked" type="checkbox-filled" color="#C6CCDA" size="16" />
             </view>
           </scroll-view>
           <view class="item uni-flex-jus" @click.stop="creatGw">添加网关</view>

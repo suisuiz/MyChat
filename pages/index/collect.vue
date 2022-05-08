@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 收藏
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-10-15 16:33:27
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-08-30 10:55:41
- * @FilePath: \things\pages\index\collect.vue
+ * @LastEditTime: 2022-05-08 12:00:34
+ * @FilePath: \MyChat\pages\index\collect.vue
 -->
 <template>
   <view class="page" v-if="pageLoad">

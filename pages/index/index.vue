@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 初始页
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2020-10-28 18:05:43
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-08-30 10:55:52
- * @FilePath: \things\pages\index\index.vue
+ * @LastEditTime: 2022-05-08 12:00:24
+ * @FilePath: \MyChat\pages\index\index.vue
 -->
 <template>
   <view></view>

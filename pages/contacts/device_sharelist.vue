@@ -1,12 +1,9 @@
 <!--
  * @Descripttion: 共享名单
  * @Author: SUI
- * @Company: chorustek
- * @Date: 2021-06-10 16:50:39
- * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-08-30 10:54:42
- * @FilePath: \things\pages\contacts\device_sharelist.vue
+ * @LastEditTime: 2022-05-08 12:01:52
+ * @FilePath: \MyChat\pages\contacts\device_sharelist.vue
 -->
 <template>
   <view v-if="pageLoad" class="page">
