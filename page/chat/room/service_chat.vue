@@ -5,7 +5,7 @@
  * @Date: 2021-03-23 10:04:11
  * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-11-26 18:33:19
+ * @LastEditTime: 2021-12-22 18:25:22
  * @FilePath: \things\pages\chat\room\service_chat.vue
 -->
 <template>
@@ -304,8 +304,11 @@
 
                   <!-- type 10 怡亚通样式  投屏-->
                   <block v-if="item.content.type == '10'">
-                    <view class="leftMsg" @tap="ttyToUrl(item)">
+                    <view class="leftMsg" @tap="ttyToUrl(item)" v-if="item.content.subtype !== '5'">
                       <rich-text :nodes="item.content.content"></rich-text>
+                    </view>
+                    <view @tap="toUploadFile(item)" v-else>
+                      <uploadFileMask :msgid="item.content.msgid" :msgnodes="item.content.content" :receiveid="receiveid" :id="item.content.msgid + index"></uploadFileMask>
                     </view>
                   </block>
 
@@ -381,8 +384,8 @@
     </view>
 
     <!-- 底部输入栏 -->
-    <view id="input_box" class="input-box" :class="popupLayerClass" @touchmove.stop.prevent="discard">
-      <!-- <view id="input_box" class="input-box" :class="hideMore ? '' : 'showLayer'" @touchmove.stop.prevent="discard"> -->
+    <!-- <view id="input_box" class="input-box" :class="popupLayerClass" @touchmove.stop.prevent="discard"> -->
+    <view id="input_box" class="input-box" :class="hideMore ? '' : 'showLayer'" @touchmove.stop.prevent="discard">
       <view class="top-box">
         <view class="textbox">
           <!-- 点击出语音 -->
@@ -420,18 +423,18 @@
           <image src="/static/img/more/photo.png" mode=""></image>
         </view>
         <!-- 更多 -->
-        <view class="items" @tap="showMore" v-if="chatType != '1'">
+        <view class="items" @tap="showMore" v-if="chatType != '1' && serviceList.length > 0">
           <image src="/static/img/more/plus.png" mode=""></image>
         </view>
       </view>
     </view>
 
     <!-- 抽屉栏 -->
-    <view class="popup-layer" :class="popupLayerClass" @touchmove.stop.prevent="discard">
-      <!-- <view class="popup-layer" @touchmove.stop.prevent="discard" v-if="!hideMore"> -->
+    <!-- <view class="popup-layer" :class="popupLayerClass" @touchmove.stop.prevent="discard"> -->
+    <view class="popup-layer" @touchmove.stop.prevent="discard" v-if="!hideMore">
       <!-- 更多功能 相册-拍照-语音输入 -->
-      <view class="more-layer" :class="{ hidden: hideMore }">
-        <!-- <view class="more-layer"> -->
+      <!-- <view class="more-layer" :class="{ hidden: hideMore }"> -->
+      <view class="more-layer">
         <swiper class="swiper" :indicator-dots="indicatorBol">
           <swiper-item>
             <view class="list">
@@ -477,9 +480,6 @@
       </view>
       <view class="tis" :class="willStop ? 'change' : ''">{{ recordTis }}</view>
     </view>
-
-    <!-- 上传文件组件 -->
-    <l-file v-if="showUploadFile" ref="lFile" @up-success="onSuccess" @up-close="onClose"></l-file>
   </view>
 </template>
 
@@ -488,9 +488,16 @@
 let app = require('@/common/common.js')
 // 引入方法
 let { sendId, formatDate, getTimeText } = require('@/common/util.js')
+
+// 引入上传文件
+import uploadFileMask from '@/components/contents/UploadFile/UploadFile.vue'
+
 // 引入封装的 sqlite
 import DB from '@/common/sqlite.js'
 export default {
+  components: {
+    uploadFileMask
+  },
   data() {
     return {
       // 控制页面展示
@@ -689,7 +696,7 @@ export default {
 
   onShow() {
     let that = this
-    that.popupLayerClass = ''
+    that.hideMore = true
     if (that.roomid != '') {
       // 推送规则
       that.set_notify(that.roomid)
@@ -1197,9 +1204,10 @@ export default {
       if (!this.inputVal) {
         return
       }
-      if (this.chatType === '5' && this.inputVal.slice(-1) === '@') {
+      // if (this.chatType === '5' && this.inputVal.slice(-1) === '@') {
+      if (this.inputVal.slice(-1) === '@') {
         uni.navigateTo({
-          url: `choose?roomid=${this.roomid}`
+          url: `/pages/chat/choose?roomid=${this.roomid}`
         })
       }
     },
@@ -1264,20 +1272,20 @@ export default {
       this.isVoice = false
       if (this.hideMore) {
         this.hideMore = false
-        this.openDrawer()
+        // this.openDrawer()
       } else {
         this.hideDrawer()
       }
     },
 
-    // 打开抽屉
-    openDrawer() {
-      this.popupLayerClass = 'showLayer'
-    },
+    // // 打开抽屉
+    // openDrawer() {
+    //   this.popupLayerClass = 'showLayer'
+    // },
 
     // 隐藏抽屉
     hideDrawer() {
-      this.popupLayerClass = ''
+      // this.popupLayerClass = ''
       setTimeout(() => {
         this.hideMore = true
       }, 150)
@@ -1504,10 +1512,12 @@ export default {
               }
             })
           })
-          // res = res.filter((item) => item.content.subtype !== '9')
+          res = res.filter((item) => item.content.subtype !== '9')
           // console.log('对话历史', res)
           // that.msgList = that.msgList.concat(res);
-          that.msgList = res
+          if (res.length > 0) {
+            that.msgList = res
+          }
           setTimeout(() => {
             that.pageLoad = true
             that.scrollToBottom()
@@ -1665,10 +1675,10 @@ export default {
     // 跳转 URL 到 H5
     ttyToUrl(item) {
       let that = this
-      that.showUploadFile = true
+      that.hideMore = true
       // console.log(item)
-      if (item.content.subtype !== '5') {
-        that.showUploadFile = false
+      if (item.content.subtype === '5') {
+        that.showUploadFile = true
       }
       if (item.content.subtype === '1') {
         // 跳转 H5
@@ -1743,18 +1753,8 @@ export default {
       }
     },
 
-    onSuccess(res) {
-      this.showUploadFile = false
-      // console.log('上传成功回调=====33====', JSON.stringify(res))
-      // uni.showToast({
-      //   title: JSON.stringify(res),
-      //   icon: 'none'
-      // })
-    },
-
-    onClose(e) {
-      // console.log(e)
-      this.showUploadFile = false
+    toUploadFile(item) {
+      // console.log('点了上传文件')
     },
 
     // 商品详情

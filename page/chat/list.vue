@@ -5,7 +5,7 @@
  * @Date: 2020-10-15 18:56:40
  * @Version: 1.0.0
  * @LastEditors: SUI
- * @LastEditTime: 2021-11-26 17:15:30
+ * @LastEditTime: 2021-12-21 20:27:01
  * @FilePath: \things\pages\chat\list.vue
 -->
 <template>
@@ -13,14 +13,21 @@
     <!-- 点击右上角+ 仅 APP 编译-->
     <!-- #ifdef APP-PLUS -->
     <block v-if="isShow">
-      <topMask :show="isShow" @childTap="childTap($event)"></topMask>
+      <upper-right-plus :show="isShow" @childTap="childTap($event)"></upper-right-plus>
     </block>
     <!-- #endif -->
+
+    <!-- 切换展示列表 -->
+    <scroll-view class="top-tab" scroll-x>
+      <view class="top-tab-item" v-for="(item, index) in chatTopTab" :key="index" @tap="clickTopTab(item, index)">
+        <view :class="topTabIndex == index ? 'change' : 'name'">{{ item }}</view>
+      </view>
+    </scroll-view>
 
     <!-- 列表展示 -->
     <block v-if="listData.length != 0 || serviceList.length != 0">
       <!-- 服务号和管理号 -->
-      <uni-swipe-action>
+      <uni-swipe-action v-if="topTabIndex !== 1">
         <uni-swipe-action-item :right-options="options1" @click="unFollow($event, item.roomid, index)" v-for="(item, index) in serviceList" :key="'Q' + index">
           <view class="item_box uni-flex-jus" @click="intoServiceChat(item)" hover-class="bg-light">
             <!-- 左边 -->
@@ -101,7 +108,7 @@
                   <image class="avatarImg3" mode="aspectFill" :src="keys.image" @error="imageError(keys)"></image>
                 </block>
               </view>
-              <!-- <view class="spot"></view> -->
+              <view class="spot" :class="spotObj[item.status]"></view>
             </view>
             <!-- 右边 -->
             <view class="item_box_left uni-flex-ali">
@@ -171,11 +178,11 @@ let { getTimeText } = require('@/common/util.js')
 let DB = require('@/common/sqlite.js')
 
 // 引入右上角自定义蒙版
-import topMask from '@/components/top-left-mask/top-left-mask.vue'
+import UpperRightPlus from '@/components/contents/UpperRightPlus/UpperRightPlus.vue'
 
 export default {
   components: {
-    topMask
+    UpperRightPlus
   },
   data() {
     return {
@@ -204,7 +211,12 @@ export default {
       ],
       // 服务号、管理号数据
       serviceList: [],
-      updateService: null
+      updateService: null,
+      // 设备状态对象
+      spotObj: { 1: 'spot-green', 2: 'spot-gray', 3: 'spot-red' },
+
+      chatTopTab: ['全部', '未读', '已读'],
+      topTabIndex: 0
     }
   },
 
@@ -224,7 +236,9 @@ export default {
         that.getData()
       }, 1000)
       that.updateService = setInterval(() => {
-        that.getServe()
+        if (that.topTabIndex !== 1) {
+          that.getServe()
+        }
       }, 10000)
       // 推送规则
       that.set_notify('all')
@@ -237,7 +251,9 @@ export default {
             that.getData()
           }, 1000)
           that.updateService = setInterval(() => {
-            that.getServe()
+            if (that.topTabIndex !== 1) {
+              that.getServe()
+            }
           }, 10000)
           // 推送规则
           that.set_notify('all')
@@ -336,6 +352,8 @@ export default {
               item.chattype = ''
               item.name = ''
               item.image = ''
+              // 在线、离线、告警状态
+              item.status = '0'
 
               if ((item.content.type === '1' && item.content.subtype === '1') || item.content.type === '10') {
                 let str = item.content.content
@@ -372,6 +390,25 @@ export default {
                   item.siteid = info.siteid
                 }
               })
+
+              DB.selectTableData('contact')
+                .then((res) => {
+                  // console.log("建表后查询表数据", res);
+                  if (res.length != 0) {
+                    // console.log('表数据', JSON.parse(res[0].contact))
+                    let contactData = JSON.parse(res[0].contact)
+                    contactData.forEach((conitem, index) => {
+                      conitem.list.forEach((conkey, index) => {
+                        if (item.type === '1' && item.roomid === conkey.id) {
+                          item.status = conkey.status
+                        } else {
+                          item.status = conkey.status
+                        }
+                      })
+                    })
+                  }
+                })
+                .catch((error) => {})
             })
 
             // 未读消息
@@ -453,8 +490,8 @@ export default {
           // console.log(data)
           app.serviceList(data, (res) => {
             if (res.code == 0) {
-              // console.log('服务号、管理号数据===', res.data)
               res.data.map((item) => (item.time = getTimeText(item.time)))
+              // console.log('服务号、管理号数据===', res.data)
               that.serviceList = res.data
               that.filterArr()
             } else {
@@ -467,7 +504,7 @@ export default {
           })
         },
         fail() {
-          console.log('服务号、管理号获取失败')
+          // console.log('服务号、管理号获取失败')
         }
       })
     },
@@ -613,6 +650,86 @@ export default {
           app.showToast(res.message)
         }
       })
+    },
+
+    clickTopTab(name, index) {
+      // console.log(name)
+
+      // 取服务号、管理号 roomid 组数组
+      let serviceId = this.serviceList.map((item) => item.roomid)
+      // 过滤本地数据库信息 -- 移除 服务号、管理号
+      let dataList = this.listData.filter((item) => !serviceId.includes(item.roomid))
+
+      // console.log(this.serviceList)
+      // console.log(serviceId)
+      // console.log(this.arrData)
+      console.log(dataList)
+
+      // dataList = [
+      //   {
+      //     roomid: '5766a5b40-2a16-4233-baeb-',
+      //     type: '1',
+      //     userid: '4b4a32c1d-ab2e-4696-bfb4-f2caffc5b5ca',
+      //     receiveid: '11c53127e-17a3-4613-a966-c9d2ce841bc3',
+      //     time: '下午7:11',
+      //     content: {
+      //       type: '13',
+      //       content: [
+      //         {
+      //           id: '45444887d-a67f-4360-9129-882052ecd249',
+      //           name: '智慧共享田园',
+      //           image: '/file/2021-12-21/8d2b070e-313d-4bdb-97d5-12e0a315bd7d.jpg',
+      //           price: '',
+      //           type: 4,
+      //           things_id: 'DS-2CD3T87WD-L20210720AACHG38740354',
+      //           url: '/html/#/goodsdetail',
+      //           parameter: 'msgid=06cd3b0c-e043-467c-931f-70db9dee19e9&goodsid=DS-2CD3T87WD-L20210720AACHG38740354&roomid=5766a5b40-2a16-4233-baeb-a74d872c5c7e&detailid='
+      //         }
+      //       ]
+      //     },
+      //     msg_id: '1640085109583-941109',
+      //     unread: 1,
+      //     chattype: 5,
+      //     name: '智园',
+      //     image: 'https://zk.club077.com:8080/user/file/face/2021-12-17/f3684fc4-19b5-4aa4-98d6-04c224e8eca5.png',
+      //     status: 0,
+      //     member: []
+      //   },
+      //   {
+      //     roomid: '57858290f-aec2-48da-b271-',
+      //     type: '1',
+      //     userid: '19dc56c6b-114e-4103-aaa7-94c51acd0e20',
+      //     receiveid: '11c53127e-17a3-4613-a966-c9d2ce841bc3',
+      //     time: '下午6:28',
+      //     content: {
+      //       type: '1',
+      //       subtype: '3',
+      //       content: 'https://zk.club077.com/chat-cloud/file/212c3377-31d0-4592-ae1f-f7818c7c3150',
+      //       color: ''
+      //     },
+      //     msg_id: '1a2f0cff-1ae4-476e-af5a-92e847e230a4',
+      //     unread: 0,
+      //     chattype: 5,
+      //     name: '小Mfdgfgfdgfd',
+      //     image: 'http://39.99.139.115/demo/head/%E5%B0%8FM@2x.png',
+      //     status: 0,
+      //     member: []
+      //   }
+      // ]
+
+      let filterArr = []
+      if (index == 0) {
+        filterArr = dataList
+      } else if (index == 1) {
+        filterArr = dataList.filter((item) => item.unread > 0)
+      } else if (index == 2) {
+        filterArr = dataList.filter((item) => item.unread === 0)
+      }
+      console.log(filterArr)
+      this.listData = filterArr
+      setTimeout(() => {
+        this.topTabIndex = index
+      }, 300)
     }
   }
 }
@@ -688,13 +805,23 @@ export default {
       }
 
       .spot {
-        width: 18rpx;
-        height: 18rpx;
-        border-radius: 100%;
         position: absolute;
-        bottom: 4rpx;
         right: 4rpx;
+        bottom: 4rpx;
+        width: 20rpx;
+        height: 20rpx;
+        border-radius: 100%;
+      }
+
+      .spot-green {
         background: #48ca41;
+      }
+
+      .spot-gray {
+        background: #b5b7c8;
+      }
+      .spot-red {
+        background: #f94a5e;
       }
     }
 
@@ -794,6 +921,30 @@ export default {
     width: 76rpx;
     height: 88rpx;
     z-index: 990;
+  }
+
+  .top-tab {
+    width: 100%;
+    white-space: nowrap;
+    border-bottom: 1px solid #efefef;
+
+    .top-tab-item {
+      margin: 20rpx 0;
+      display: inline-block;
+      width: 120rpx;
+      text-align: center;
+
+      .name {
+        color: #636367;
+        font-size: 28rpx;
+      }
+
+      .change {
+        color: #1e1e1e;
+        font-size: 32rpx;
+        font-weight: 500;
+      }
+    }
   }
 }
 </style>
