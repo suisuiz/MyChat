@@ -1,7 +1,7 @@
 <!--
  * @Descripttion: 入口
  * @Author: SUI
- * @LastEditTime: 2022-05-08 11:48:53
+ * @LastEditTime: 2022-05-16 18:04:10
  * @FilePath: \MyChat\App.vue
 -->
 <script>
@@ -263,9 +263,10 @@ export default {
         if (valve.login == 'main') {
           app.industrial_enter({}, (res) => {
             if (res.code == 0) {
-              uni.reLaunch({
-                url: `/pages/chat/room/chat_booth?id=${res.data.room}&&title=${res.data.title}`
-              })
+              // 跳转的页面
+              // uni.reLaunch({
+              //   url: `/pages/xxx/xxx`
+              // })
             } else {
               app.showToast(res.message)
             }

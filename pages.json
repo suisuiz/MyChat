@@ -70,18 +70,6 @@
 			}
 		},
 		{
-			"path": "pages/chat/room/chat_booth",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false,
-				"navigationStyle": "custom",
-				"app-plus": {
-					"animationType": "fade-in",
-					"animationDuration": 300
-				}
-			}
-		},
-		{
 			"path": "pages/chat/room/service_chat",
 			"style": {
 				"navigationBarTitleText": "",
@@ -133,17 +121,6 @@
 			}
 		},
 		{
-			"path": "pages/index/collect",
-			"style": {
-				"navigationBarTitleText": "收藏",
-				"enablePullDownRefresh": true,
-				"app-plus": {
-					"animationType": "fade-in",
-					"animationDuration": 300
-				}
-			}
-		},
-		{
 			"path": "pages/user/me",
 			"style": {
 				"navigationBarTitleText": "",
@@ -170,40 +147,6 @@
 			"style": {
 				"navigationBarTitleText": "选择联系人",
 				"enablePullDownRefresh": false,
-				"app-plus": {
-					"animationType": "fade-in",
-					"animationDuration": 300
-				}
-			}
-		},
-		{
-			"path": "pages/contacts/share_room",
-			"style": {
-				"navigationBarTitleText": "选择群聊",
-				"enablePullDownRefresh": false,
-				"app-plus": {
-					"animationType": "fade-in",
-					"animationDuration": 300
-				}
-			}
-		},
-		{
-			"path": "pages/other/introduce",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false,
-				"app-plus": {
-					"animationType": "fade-in",
-					"animationDuration": 300
-				}
-			}
-		},
-		{
-			"path": "pages/other/video",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false,
-				"navigationStyle": "custom",
 				"app-plus": {
 					"animationType": "fade-in",
 					"animationDuration": 300
@@ -238,39 +181,6 @@
 			"style": {
 				"navigationBarTitleText": "",
 				"navigationBarBackgroundColor": "#F3F4F8",
-				"enablePullDownRefresh": false,
-				"app-plus": {
-					"animationType": "fade-in",
-					"animationDuration": 300
-				}
-			}
-		},
-		{
-			"path": "pages/index/creat_role",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false,
-				"app-plus": {
-					"animationType": "fade-in",
-					"animationDuration": 300
-				}
-			}
-		},
-		{
-			"path": "pages/index/creat_subtype",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false,
-				"app-plus": {
-					"animationType": "fade-in",
-					"animationDuration": 300
-				}
-			}
-		},
-		{
-			"path": "pages/index/creat_content",
-			"style": {
-				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false,
 				"app-plus": {
 					"animationType": "fade-in",
@@ -314,18 +224,6 @@
 			}
 		},
 		{
-			"path": "pages/contacts/more",
-			"style": {
-				"navigationBarTitleText": "资料设置",
-				"navigationBarBackgroundColor": "#F3F4F8",
-				"enablePullDownRefresh": false,
-				"app-plus": {
-					"animationType": "fade-in",
-					"animationDuration": 300
-				}
-			}
-		},
-		{
 			"path": "pages/user/info",
 			"style": {
 				"navigationBarTitleText": "个人信息",
@@ -356,66 +254,9 @@
 			}
 		},
 		{
-			"path": "pages/contacts/device_sharelist",
-			"style": {
-				"navigationBarTitleText": "共享名单",
-				"enablePullDownRefresh": false,
-				"app-plus": {
-					"animationType": "fade-in",
-					"animationDuration": 300
-				}
-			}
-		},
-		{
 			"path": "pages/place/creat_place",
 			"style": {
 				"navigationBarTitleText": "新建场所",
-				"navigationBarBackgroundColor": "#F3F4F8",
-				"enablePullDownRefresh": false,
-				"app-plus": {
-					"animationType": "fade-in",
-					"animationDuration": 300
-				}
-			}
-		},
-		{
-			"path": "pages/place/list",
-			"style": {
-				"navigationBarTitleText": "场所",
-				"enablePullDownRefresh": false,
-				"app-plus": {
-					"animationType": "fade-in",
-					"animationDuration": 300
-				}
-			}
-		},
-		{
-			"path": "pages/place/card",
-			"style": {
-				"navigationBarTitleText": "场所",
-				"navigationBarBackgroundColor": "#F3F4F8",
-				"enablePullDownRefresh": false,
-				"app-plus": {
-					"animationType": "fade-in",
-					"animationDuration": 300
-				}
-			}
-		},
-		{
-			"path": "pages/place/run_list",
-			"style": {
-				"navigationBarTitleText": "运行名单",
-				"enablePullDownRefresh": false,
-				"app-plus": {
-					"animationType": "fade-in",
-					"animationDuration": 300
-				}
-			}
-		},
-		{
-			"path": "pages/chat/run_position",
-			"style": {
-				"navigationBarTitleText": "运行位置",
 				"navigationBarBackgroundColor": "#F3F4F8",
 				"enablePullDownRefresh": false,
 				"app-plus": {
@@ -494,18 +335,6 @@
 			}
 		},
 		{
-			"path": "pages/user/run",
-			"style": {
-				"navigationBarTitleText": "运行位置",
-				"navigationBarBackgroundColor": "#F3F4F8",
-				"enablePullDownRefresh": false,
-				"app-plus": {
-					"animationType": "fade-in",
-					"animationDuration": 300
-				}
-			}
-		},
-		{
 			"path": "pages/chat/choose",
 			"style": {
 				"navigationBarTitleText": "选择提醒的人",
@@ -540,32 +369,9 @@
 			}
 		},
 		{
-			"path": "pages/device/add_list",
-			"style": {
-				"navigationBarTitleText": "手动添加",
-				"navigationBarBackgroundColor": "#F3F4F8",
-				"enablePullDownRefresh": false,
-				"app-plus": {
-					"animationType": "fade-in",
-					"animationDuration": 300
-				}
-			}
-		},
-		{
 			"path": "pages/device/application_market",
 			"style": {
 				"navigationBarTitleText": "应用市场",
-				"enablePullDownRefresh": false,
-				"app-plus": {
-					"animationType": "fade-in",
-					"animationDuration": 300
-				}
-			}
-		},
-		{
-			"path": "pages/device/appslist",
-			"style": {
-				"navigationBarTitleText": "应用",
 				"enablePullDownRefresh": false,
 				"app-plus": {
 					"animationType": "fade-in",
