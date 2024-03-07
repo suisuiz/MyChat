@@ -1,9 +1,3 @@
-<!--
- * @Descripttion: 入口
- * @Author: SUI
- * @LastEditTime: 2024-01-22 17:34:16
- * @FilePath: \MyChat\App.vue
--->
 <script>
 export default {
   data() {
@@ -23,12 +17,6 @@ export default {
 </script>
 
 <style>
-/* APP-NVUE 不编译，其他编译 */
-/* #ifndef APP-NVUE */
-/* @import './common/uni.css'; */
-@import '@/static/css/uni.css';
-/* #endif */
-
 /* @import './common/uni-nvue.css'; */
 @import '@/static/css/uni-nvue.css';
 
