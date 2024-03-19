@@ -1,0 +1,88 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "pages/content/form",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false,
+        "app-plus": {
+          "animationType": "fade-in",
+          "animationDuration": 300
+        }
+      }
+    },
+    {
+      "path": "pages/content/camera",
+      "style": {
+        "navigationBarTitleText": "照相",
+        "enablePullDownRefresh": false,
+        "app-plus": {
+          "animationType": "fade-in",
+          "animationDuration": 300
+        }
+      }
+    },
+    {
+      "path": "pages/content/uCharts",
+      "style": {
+        "navigationBarTitleText": "uCharts 图表",
+        "enablePullDownRefresh": false,
+        "app-plus": {
+          "animationType": "fade-in",
+          "animationDuration": 300
+        }
+      }
+    },
+    {
+      "path": "pages/content/ECharts",
+      "style": {
+        "navigationBarTitleText": "ECharts 图表",
+        "enablePullDownRefresh": false,
+        "app-plus": {
+          "animationType": "fade-in",
+          "animationDuration": 300
+        }
+      }
+    },
+    {
+      "path": "pages/content/screenshot",
+      "style": {
+        "navigationBarTitleText": "截图",
+        "enablePullDownRefresh": false,
+        "app-plus": {
+          "animationType": "fade-in",
+          "animationDuration": 300
+        }
+      }
+    },
+		{
+			"path" : "pages/content/calendar",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/content/daylist",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		}
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "uniIdRouter": {}
+}
